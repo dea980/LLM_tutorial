@@ -9,13 +9,9 @@ load_dotenv()
 # Initialize OpenAI client
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-# Create chat_logs directory if it doesn't exist
-if not os.path.exists('chat_logs'):
-    os.makedirs('chat_logs')
-
-# Create a new log file with timestamp
+# Create a new log file with timestamp in the main directory
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-log_file = f"chat_logs/chat_history_{timestamp}.txt"
+log_file = f"main/chat_history_{timestamp}.txt"
 
 # Prompt
 prompt = "Be very professional Bank analyst"
