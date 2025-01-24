@@ -9,9 +9,9 @@ load_dotenv()
 # Initialize OpenAI client
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-# Create a new log file with timestamp in the main directory
+# Create a new log file with timestamp in the current directory
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-log_file = f"main/chat_history_{timestamp}.txt"
+log_file = f"chat_history_{timestamp}.txt"
 
 # Prompt
 prompt = "Be very professional Bank analyst"
